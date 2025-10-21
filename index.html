@@ -96,7 +96,6 @@
             color: white;
         }
         
-        /* Navigation */
         nav {
             background: rgba(255, 255, 255, 0.98);
             padding: 18px;
@@ -171,14 +170,14 @@
             display: flex;
             justify-content: space-between;
             align-items: start;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             flex-wrap: wrap;
             gap: 15px;
         }
         
         .project-title {
             color: #0f2027;
-            font-size: 1.5em;
+            font-size: 1.4em;
             flex: 1;
             min-width: 250px;
             font-weight: 600;
@@ -197,72 +196,31 @@
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
-            margin: 15px 0;
+            margin: 12px 0;
         }
         
         .tag {
             background: #e8eef5;
-            padding: 6px 14px;
+            padding: 5px 13px;
             border-radius: 15px;
-            font-size: 0.82em;
+            font-size: 0.8em;
             color: #555;
             font-weight: 500;
         }
         
-        .challenge, .solution, .impact {
-            margin: 20px 0;
-        }
-        
-        .challenge h4, .solution h4, .impact h4 {
-            color: #203a43;
-            margin-bottom: 10px;
-            font-size: 1.05em;
-            font-weight: 600;
-        }
-        
-        .challenge p, .solution p, .impact p {
-            font-weight: 400;
-            color: #333;
-        }
-        
-        .solution ul, .impact ul {
-            margin-top: 10px;
-            margin-left: 20px;
-        }
-        
-        .solution li, .impact li {
-            padding: 6px 0;
+        .project-description {
             color: #333;
             font-weight: 400;
-        }
-        
-        .impact ul {
-            list-style: none;
-            padding-left: 0;
-            margin-left: 0;
-        }
-        
-        .impact li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-        }
-        
-        .impact li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #0f2027;
-            font-weight: 600;
-            font-size: 1.1em;
+            margin: 15px 0;
+            line-height: 1.6;
         }
         
         .metrics {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 18px;
-            margin: 20px 0;
-            padding: 22px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 18px 0;
+            padding: 20px;
             background: #f5f7fa;
             border-radius: 10px;
         }
@@ -272,35 +230,58 @@
         }
         
         .metric-value {
-            font-size: 1.8em;
+            font-size: 1.6em;
             font-weight: 600;
             color: #0f2027;
         }
         
         .metric-label {
             color: #666;
-            font-size: 0.88em;
+            font-size: 0.85em;
             font-weight: 400;
         }
         
         .tech-stack {
             background: #f5f7fa;
-            padding: 16px;
+            padding: 14px;
             border-radius: 10px;
-            margin-top: 15px;
+            margin-top: 12px;
         }
         
         .tech-stack h5 {
             color: #203a43;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-weight: 600;
-            font-size: 0.95em;
+            font-size: 0.92em;
         }
         
         .tech-stack p {
             font-weight: 400;
             color: #555;
-            font-size: 0.92em;
+            font-size: 0.88em;
+            line-height: 1.5;
+        }
+        
+        .experience-content {
+            margin: 15px 0;
+        }
+        
+        .experience-content h4 {
+            color: #203a43;
+            margin: 15px 0 10px 0;
+            font-size: 1.05em;
+            font-weight: 600;
+        }
+        
+        .experience-content ul {
+            margin-left: 20px;
+            color: #333;
+        }
+        
+        .experience-content li {
+            padding: 5px 0;
+            font-weight: 400;
+            line-height: 1.6;
         }
         
         .skills-grid {
@@ -451,25 +432,13 @@
                 <div class="project-tags">
                     <span class="tag">Power Automate</span>
                     <span class="tag">SharePoint</span>
-                    <span class="tag">Outlook Integration</span>
                     <span class="tag">Conditional Logic</span>
                     <span class="tag">Dynamic Content</span>
                 </div>
                 
-                <div class="challenge">
-                    <h4>The Challenge</h4>
-                    <p>The audit team spent over 4 hours daily manually creating and sending personalized audit emails. This manual process was not only time-consuming but also prone to human error, inconsistent formatting, and delays that impacted audit timelines across multiple countries.</p>
-                </div>
-                
-                <div class="solution">
-                    <h4>The Solution</h4>
-                    <p>I designed and implemented two intelligent Power Automate flows with sophisticated conditional logic and dynamic content generation:</p>
-                    <ul>
-                        <li>Daily Flow: Automatically generates 50 personalized audit emails with recipient-specific data, formatting, and attachments</li>
-                        <li>Weekly Flow: Creates 7 comprehensive audit summary emails with zero manual intervention</li>
-                        <li>Smart Logic: Built conditional branching to handle different audit types, stakeholder levels, and regional requirements</li>
-                    </ul>
-                </div>
+                <p class="project-description">
+                    Eliminated 250+ manual audit email tasks monthly by designing intelligent Power Automate flows with conditional logic. Built daily and weekly automated workflows that generate personalized emails with recipient-specific data, reducing processing time from 250 minutes to 5 minutes daily while achieving 100% consistency across all regions.
+                </p>
                 
                 <div class="metrics">
                     <div class="metric">
@@ -477,33 +446,18 @@
                         <div class="metric-label">Time Reduction</div>
                     </div>
                     <div class="metric">
-                        <div class="metric-value">250 → 5 min</div>
-                        <div class="metric-label">Daily Processing</div>
-                    </div>
-                    <div class="metric">
                         <div class="metric-value">20+</div>
                         <div class="metric-label">Hours Saved Weekly</div>
                     </div>
                     <div class="metric">
                         <div class="metric-value">250+</div>
-                        <div class="metric-label">Monthly Tasks Eliminated</div>
+                        <div class="metric-label">Tasks Eliminated</div>
                     </div>
                 </div>
                 
-                <div class="impact">
-                    <h4>Business Impact</h4>
-                    <ul>
-                        <li>Eliminated 250+ manual tasks monthly, freeing team for high-value audit work</li>
-                        <li>Reduced email processing from 250 minutes to 5 minutes daily</li>
-                        <li>Achieved 100% consistency in audit communications across all regions</li>
-                        <li>Improved audit timeline adherence by eliminating email-related delays</li>
-                        <li>Created reusable template framework for future automation projects</li>
-                    </ul>
-                </div>
-                
                 <div class="tech-stack">
-                    <h5>Technologies & Techniques</h5>
-                    <p>Microsoft Power Automate, SharePoint Lists, Outlook Integration, Dynamic Content Generation, Conditional Logic, Expression Functions, Error Handling, Parallel Processing</p>
+                    <h5>Technologies</h5>
+                    <p>Microsoft Power Automate, SharePoint Lists, Outlook Integration, Dynamic Content Generation, Conditional Logic, Expression Functions</p>
                 </div>
             </div>
 
@@ -518,25 +472,11 @@
                     <span class="tag">Power Automate</span>
                     <span class="tag">Approval Workflows</span>
                     <span class="tag">Cross-Border</span>
-                    <span class="tag">SharePoint</span>
                 </div>
                 
-                <div class="challenge">
-                    <h4>The Challenge</h4>
-                    <p>The organization tracked vacation and out-of-office time using a shared Excel file across teams in the US, Mexico, and Argentina. This resulted in conflicting entries, no accountability, no approval process, and zero audit trail. Different time zones and holiday calendars made coordination nearly impossible.</p>
-                </div>
-                
-                <div class="solution">
-                    <h4>The Solution</h4>
-                    <p>I designed a comprehensive Microsoft Lists database integrated with Power Automate approval workflows that transformed chaos into structured, auditable processes:</p>
-                    <ul>
-                        <li>Centralized Database: Microsoft Lists with custom columns for dates, regions, delegates, and status tracking</li>
-                        <li>Approval Workflow: Multi-level approval process with automatic routing based on duration and role</li>
-                        <li>Automated Notifications: Email alerts for requests, approvals, rejections, and reminders</li>
-                        <li>Delegate Management: Automatic assignment and notification of coverage responsibilities</li>
-                        <li>Regional Intelligence: Built-in logic for international holidays and working hours</li>
-                    </ul>
-                </div>
+                <p class="project-description">
+                    Transformed chaotic Excel-based vacation tracking into a structured Microsoft Lists database with automated approval workflows serving US, Mexico, and Argentina teams. Implemented multi-level approvals, automated delegate assignment, and regional intelligence for holidays, eliminating scheduling conflicts and creating complete audit trails for compliance.
+                </p>
                 
                 <div class="metrics">
                     <div class="metric">
@@ -548,30 +488,14 @@
                         <div class="metric-label">Audit Trail</div>
                     </div>
                     <div class="metric">
-                        <div class="metric-value">0</div>
-                        <div class="metric-label">Scheduling Conflicts</div>
+                        <div class="metric-value">80%</div>
+                        <div class="metric-label">Admin Reduction</div>
                     </div>
-                    <div class="metric">
-                        <div class="metric-value">5+</div>
-                        <div class="metric-label">Hours Saved Weekly</div>
-                    </div>
-                </div>
-                
-                <div class="impact">
-                    <h4>Business Impact</h4>
-                    <ul>
-                        <li>Eliminated scheduling conflicts and double-bookings across three countries</li>
-                        <li>Created complete audit trail for compliance and management reporting</li>
-                        <li>Automated delegate assignment ensuring seamless coverage during absences</li>
-                        <li>Implemented comment tracking for issue documentation and resolution</li>
-                        <li>Enabled real-time visibility into team availability for project planning</li>
-                        <li>Reduced administrative overhead by 80% for managers</li>
-                    </ul>
                 </div>
                 
                 <div class="tech-stack">
-                    <h5>Technologies & Techniques</h5>
-                    <p>Microsoft Lists, Power Automate, SharePoint, Approval Workflows, Email Notifications, Conditional Logic, Date/Time Functions, Multi-Region Support, Escalation Handling</p>
+                    <h5>Technologies</h5>
+                    <p>Microsoft Lists, Power Automate, SharePoint, Approval Workflows, Email Notifications, Multi-Region Support, Escalation Handling</p>
                 </div>
             </div>
 
@@ -584,32 +508,18 @@
                 <div class="project-tags">
                     <span class="tag">Power Apps</span>
                     <span class="tag">Microsoft Lists</span>
-                    <span class="tag">Power Automate</span>
-                    <span class="tag">SharePoint</span>
+                    <span class="tag">Automation</span>
                     <span class="tag">Business Intelligence</span>
                 </div>
                 
-                <div class="challenge">
-                    <h4>The Challenge</h4>
-                    <p>The team had an existing SharePoint-based task tracking system that wasn't being used effectively. Task updates were inconsistent, the interface was difficult to navigate, and leadership lacked real-time visibility into team capacity and project progress. I was asked to take ownership and modernize the solution.</p>
-                </div>
-                
-                <div class="solution">
-                    <h4>The Solution</h4>
-                    <p>I enhanced the existing tracking system with modern Power Platform capabilities, transforming it from an underutilized list into an intelligent management tool:</p>
-                    <ul>
-                        <li>Custom Power Apps Interface: Built user-friendly form with improved visualization, replacing the basic SharePoint view</li>
-                        <li>Smart Reminder System: Implemented 7-day automated reminder emails with escalation logic to drive adoption</li>
-                        <li>Enhanced Data Structure: Optimized existing fields and added new tracking capabilities</li>
-                        <li>Management Dashboards: Created real-time views for capacity planning and resource allocation</li>
-                        <li>Analytics Integration: Enabled weekly utilization reports for leadership decision-making</li>
-                    </ul>
-                </div>
+                <p class="project-description">
+                    Revitalized underutilized SharePoint tracking system by building custom Power Apps interface and implementing automated 7-day reminder emails. Increased task update compliance from 40% to 95%+, enabling real-time capacity insights and data-driven resource allocation decisions for leadership across the entire team.
+                </p>
                 
                 <div class="metrics">
                     <div class="metric">
                         <div class="metric-value">95%+</div>
-                        <div class="metric-label">Update Compliance</div>
+                        <div class="metric-label">Compliance</div>
                     </div>
                     <div class="metric">
                         <div class="metric-value">100%</div>
@@ -617,29 +527,13 @@
                     </div>
                     <div class="metric">
                         <div class="metric-value">Real-Time</div>
-                        <div class="metric-label">Capacity Insights</div>
+                        <div class="metric-label">Insights</div>
                     </div>
-                    <div class="metric">
-                        <div class="metric-value">Daily</div>
-                        <div class="metric-label">Documentation</div>
-                    </div>
-                </div>
-                
-                <div class="impact">
-                    <h4>Business Impact</h4>
-                    <ul>
-                        <li>Increased task update compliance from ~40% to 95%+ through automated reminders</li>
-                        <li>Transformed underutilized system into daily-use platform for entire team</li>
-                        <li>Enabled leadership to make data-driven resource allocation decisions</li>
-                        <li>Provided real-time visibility into team capacity and bottlenecks</li>
-                        <li>Improved project planning accuracy with historical utilization data</li>
-                        <li>Enhanced team accountability with transparent, user-friendly tracking</li>
-                    </ul>
                 </div>
                 
                 <div class="tech-stack">
-                    <h5>Technologies & Techniques</h5>
-                    <p>Power Apps (Canvas), Microsoft Lists, Power Automate, SharePoint, Custom Forms, Reminder Logic, Data Visualization, Conditional Formatting, User Experience Design</p>
+                    <h5>Technologies</h5>
+                    <p>Power Apps (Canvas), Microsoft Lists, Power Automate, SharePoint, Custom Forms, Data Visualization, User Experience Design</p>
                 </div>
             </div>
         </div>
@@ -657,17 +551,206 @@
                 </div>
                 <p style="margin: 12px 0; color: #666; font-weight: 500;">PwC</p>
                 
-                <div class="impact">
-                    <h4>Cross-Functional Automation & Collaboration</h4>
+                <div class="experience-content">
                     <ul>
                         <li>Partner with HR Operations, IT, and business units across US, Mexico, and Argentina to deliver integrated automation solutions</li>
                         <li>Lead requirements gathering and stakeholder management across international teams with different workflows and compliance requirements</li>
                         <li>Design and implement Power Platform solutions (Power Automate, Power Apps, SharePoint) that streamline operations and improve process efficiency</li>
                         <li>Create comprehensive technical documentation ensuring knowledge transfer, sustainability, and team enablement</li>
                         <li>Deliver data-driven insights and analytics for leadership decision-making across global operations</li>
-                        <li>Manage multiple concurrent automation projects serving diverse stakeholder groups</li>
                     </ul>
                 </div>
                 
                 <div class="tech-stack">
-                    <h5>Technologies & Impact
+                    <h5>Technologies</h5>
+                    <p>Power Automate, Power Apps, SharePoint, Microsoft Lists, Workday, Cross-border project delivery, Stakeholder management</p>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <div class="project-header">
+                    <h3 class="project-title">Enterprise Systems Support</h3>
+                    <span class="project-date">Sep 2022 - Apr 2024</span>
+                </div>
+                <p style="margin: 12px 0; color: #666; font-weight: 500;">KPMG</p>
+                
+                <div class="experience-content">
+                    <ul>
+                        <li>Maintained 95%+ SLA compliance supporting Partners and VIPs on business-critical systems</li>
+                        <li>Administered Azure AD, Intune, and OKTA for 1,000+ users ensuring security and compliance</li>
+                        <li>Managed identity lifecycle including MFA implementation and access controls</li>
+                        <li>Supported enterprise platforms: Workday, Beeline, Yello, ServiceNow</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-stack">
+                    <h5>Technologies</h5>
+                    <p>Azure Active Directory, Intune, OKTA, Workday, Beeline, Yello, ServiceNow, MFA, Identity Management</p>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <div class="project-header">
+                    <h3 class="project-title">Technical Operations</h3>
+                    <span class="project-date">Dec 2018 - Sep 2022</span>
+                </div>
+                <p style="margin: 12px 0; color: #666; font-weight: 500;">CompuCom</p>
+                
+                <div class="experience-content">
+                    <ul>
+                        <li>Managed critical incidents for 8,000+ retail locations maintaining 98%+ SLA</li>
+                        <li>Processed 50+ daily priority tickets with comprehensive tracking</li>
+                        <li>Administered Active Directory and Exchange for enterprise clients</li>
+                        <li>Created technical documentation improving team efficiency by 30%</li>
+                        <li>Developed knowledge base reducing ticket resolution time</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-stack">
+                    <h5>Technologies</h5>
+                    <p>ServiceNow, Active Directory, Exchange Online, VDI Management, Network Operations, Incident Management</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SKILLS & EDUCATION SECTION -->
+        <div id="skills" class="page-section">
+            <div class="section-title">
+                <h2>Technical Skills</h2>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Automation & Development</h3>
+                    <ul>
+                        <li>✓ Microsoft Power Automate</li>
+                        <li>✓ Power Apps (Canvas & Model-driven)</li>
+                        <li>✓ Microsoft Lists</li>
+                        <li>✓ SharePoint Workflows</li>
+                        <li>✓ Process Design</li>
+                        <li>✓ Workflow Optimization</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Enterprise Systems</h3>
+                    <ul>
+                        <li>✓ ServiceNow</li>
+                        <li>✓ Workday</li>
+                        <li>✓ Beeline</li>
+                        <li>✓ Active Directory</li>
+                        <li>✓ Azure AD</li>
+                        <li>✓ OKTA/MFA</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Cloud & Infrastructure</h3>
+                    <ul>
+                        <li>✓ Microsoft 365 Admin</li>
+                        <li>✓ Azure Fundamentals</li>
+                        <li>✓ Intune</li>
+                        <li>✓ Exchange Online</li>
+                        <li>✓ SharePoint Administration</li>
+                        <li>✓ VDI Management</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Data & Analytics</h3>
+                    <ul>
+                        <li>✓ Power BI</li>
+                        <li>✓ Alteryx</li>
+                        <li>✓ Data Analysis</li>
+                        <li>✓ Process Metrics</li>
+                        <li>✓ Reporting & Dashboards</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Methodologies</h3>
+                    <ul>
+                        <li>✓ Agile/Scrum</li>
+                        <li>✓ Process Improvement</li>
+                        <li>✓ ITIL Fundamentals</li>
+                        <li>✓ Change Management</li>
+                        <li>✓ Technical Documentation</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>✓ Cross-Border Collaboration</li>
+                        <li>✓ Stakeholder Management</li>
+                        <li>✓ Bilingual (EN/ES)</li>
+                        <li>✓ Remote Work Expert</li>
+                        <li>✓ Problem Solving</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-title" style="margin-top: 40px;">
+                <h2>Education & Certifications</h2>
+            </div>
+
+            <div class="experience-card">
+                <h3 style="color: #0f2027; font-size: 1.3em; font-weight: 600;">Computer Systems Engineering</h3>
+                <p style="color: #666; margin: 10px 0; font-weight: 500;">Kuepa University | Expected January 2026</p>
+                <p style="font-weight: 400; color: #444;">Currently completing degree while working full-time, focusing on software development, systems analysis, and automation technologies.</p>
+            </div>
+
+            <div class="experience-card">
+                <h3 style="color: #0f2027; font-size: 1.3em; font-weight: 600;">Professional Certifications</h3>
+                <div class="project-tags" style="margin-top: 15px;">
+                    <span class="tag">Power BI Fundamentals</span>
+                    <span class="tag">Alteryx Data Science</span>
+                    <span class="tag">Scrum Fundamentals</span>
+                    <span class="tag">TOEIC 915/990</span>
+                </div>
+                <p style="margin-top: 15px; font-weight: 400; color: #444;">TOEIC Score of 915 demonstrates full professional working proficiency in English for business environments.</p>
+            </div>
+        </div>
+
+        <footer>
+            <h2 style="color: #0f2027; margin-bottom: 20px;">Let's Build Something Amazing Together</h2>
+            <p style="font-size: 1.05em; margin-bottom: 30px; color: #555;">
+                I'm passionate about transforming manual processes into intelligent automation solutions.<br>
+                Whether you need to streamline operations, improve efficiency, or unlock data insights,<br>
+                I'm ready to help your organization achieve measurable results.
+            </p>
+            
+            <div>
+                <a href="mailto:lizbeth.ayalaph2001@gmail.com" class="cta-button">📧 lizbeth.ayalaph2001@gmail.com</a>
+                <a href="https://linkedin.com/in/lizbeth-a-a3552b221" target="_blank" class="cta-button">View LinkedIn</a>
+            </div>
+            
+            <p style="margin-top: 30px; color: #7e8ba3; font-size: 0.9em;">
+                📍 Mexico City, Mexico | 🌐 Remote Available | 💼 Open to Senior-Level Opportunities
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all nav links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Add active class to clicked nav link
+            document.getElementById('nav-' + sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
