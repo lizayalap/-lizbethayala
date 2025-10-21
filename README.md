@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @lizayalap
-- 👀 I’m interested in coding and technology.
+- 👀 I’m interested in automation and technology.
 - 🌱 I’m currently learning to code.
-- 💞️ I’m looking to collaborate on AI and security projects.
+- 💞️ I’m looking to collaborate on AI and automation projects.
 - 📫 How to reach me lizbeth.ayalaph2001@gmail.com
 
 <!---
