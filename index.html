@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lizbeth Ayala - Process Automation Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        
+        header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .contact-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-links a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #667eea;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        
+        .contact-links a:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .section-title {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .section-title h2 {
+            color: #667eea;
+            font-size: 2em;
+        }
+        
+        .project-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .project-title {
+            color: #667eea;
+            font-size: 1.8em;
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .project-date {
+            background: #667eea;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        
+        .project-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+        
+        .tag {
+            background: #f0f0f0;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            color: #666;
+        }
+        
+        .challenge, .solution, .impact {
+            margin: 20px 0;
+        }
+        
+        .challenge h4, .solution h4, .impact h4 {
+            color: #764ba2;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .impact ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .impact li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .impact li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9ff;
+            border-radius: 10px;
+        }
+        
+        .metric {
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .metric-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .tech-stack {
+            background: #f8f9ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        
+        .tech-stack h5 {
+            color: #764ba2;
+            margin-bottom: 10px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .skill-category {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            padding: 8px 0;
+            color: #666;
+        }
+        
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1em;
+            margin: 20px 10px;
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #764ba2;
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .stats {
+                gap: 20px;
+            }
+            
+            .project-header {
+                flex-direction: column;
+            }
+            
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lizbeth Ayala Pérez</h1>
+            <p>Process Automation Specialist | Power Platform Expert</p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">6+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Time Reduction</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Hours Saved Weekly</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Countries Served</div>
+                </div>
+            </div>
+            
+            <div class="contact-links">
+                <a href="mailto:lizbeth.ayalaph2001@gmail.com">Email Me</a>
+                <a href="https://linkedin.com/in/lizbeth-a-a3552b221" target="_blank">LinkedIn</a>
+                <a href="tel:+525582076057">+52 55 8207 6057</a>
+            </div>
+        </header>
+
+        <div class="section-title">
+            <h2>🚀 Featured Projects</h2>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h3 class="project-title">Audit Email Automation System</h3>
+                <span class="project-date">2024 | PwC</span>
+            </div>
+            
+            <div class="project-tags">
+                <span class="tag">Power Automate</span>
+                <span class="tag">SharePoint</span>
+                <span class="tag">Outlook Integration</span>
+                <span class="tag">Conditional Logic</span>
+                <span class="tag">Dynamic Content</span>
+            </div>
+            
+            <div class="challenge">
+                <h4>🎯 The Challenge</h4>
+                <p>The audit team spent over 4 hours daily manually creating and sending personalized audit emails. This manual process was not only time-consuming but also prone to human error, inconsistent formatting, and delays that impacted audit timelines across multiple countries.</p>
+            </div>
+            
+            <div class="solution">
+                <h4>💡 The Solution</h4>
+                <p>I designed and implemented two intelligent Power Automate flows with sophisticated conditional logic and dynamic content generation:</p>
+                <ul style="margin-top: 10px; margin-left: 20px;">
+                    <li><strong>Daily Flow:</strong> Automatically generates 50 personalized audit emails with recipient-specific data, formatting, and attachments</li>
+                    <li><strong>Weekly Flow:</strong> Creates 7 comprehensive audit summary emails with zero manual intervention</li>
+                    <li><strong>Smart Logic:</strong> Built conditional branching to handle different audit types, stakeholder levels, and regional requirements</li>
+                </ul>
+            </div>
+            
+            <div class="metrics">
+                <div class="metric">
+                    <div class="metric-value">98%</div>
+                    <div class="metric-label">Time Reduction</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">250 min → 5 min</div>
+                    <div class="metric-label">Daily Processing</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">20+</div>
+                    <div class="metric-label">Hours Saved Weekly</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">250+</div>
+                    <div class="metric-label">Monthly Tasks Eliminated</div>
+                </div>
+            </div>
+            
+            <div class="impact">
+                <h4>📊 Business Impact</h4>
+                <ul>
+                    <li>Eliminated 250+ manual tasks monthly, freeing team for high-value audit work</li>
+                    <li>Reduced email processing from 250 minutes to 5 minutes daily</li>
+                    <li>Achieved 100% consistency in audit communications across all regions</li>
+                    <li>Improved audit timeline adherence by eliminating email-related delays</li>
+                    <li>Created reusable template framework for future automation projects</li>
+                </ul>
+            </div>
+            
+            <div class="tech-stack">
+                <h5>Technologies & Techniques:</h5>
+                <p>Microsoft Power Automate, SharePoint Lists, Outlook Integration, Dynamic Content Generation, Conditional Logic, Expression Functions, Error Handling, Parallel Processing</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h3 class="project-title">Global Out-of-Office Management System</h3>
+                <span class="project-date">2024 | PwC</span>
+            </div>
+            
+            <div class="project-tags">
+                <span class="tag">Microsoft Lists</span>
+                <span class="tag">Power Automate</span>
+                <span class="tag">Approval Workflows</span>
+                <span class="tag">Cross-Border</span>
+                <span class="tag">SharePoint</span>
+            </div>
+            
+            <div class="challenge">
+                <h4>🎯 The Challenge</h4>
+                <p>The organization tracked vacation and out-of-office time using a shared Excel file across teams in the US, Mexico, and Argentina. This resulted in conflicting entries, no accountability, no approval process, and zero audit trail. Different time zones and holiday calendars made coordination nearly impossible.</p>
+            </div>
+            
+            <div class="solution">
+                <h4>💡 The Solution</h4>
+                <p>I designed a comprehensive Microsoft Lists database integrated with Power Automate approval workflows that transformed chaos into structured, auditable processes:</p>
+                <ul style="margin-top: 10px; margin-left: 20px;">
+                    <li><strong>Centralized Database:</strong> Microsoft Lists with custom columns for dates, regions, delegates, and status tracking</li>
+                    <li><strong>Approval Workflow:</strong> Multi-level approval process with automatic routing based on duration and role</li>
+                    <li><strong>Automated Notifications:</strong> Email alerts for requests, approvals, rejections, and reminders</li>
+                    <li><strong>Delegate Management:</strong> Automatic assignment and notification of coverage responsibilities</li>
+                    <li><strong>Regional Intelligence:</strong> Built-in logic for international holidays and working hours</li>
+                </ul>
+            </div>
+            
+            <div class="metrics">
+                <div class="metric">
+                    <div class="metric-value">3</div>
+                    <div class="metric-label">Countries</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">100%</div>
+                    <div class="metric-label">Audit Trail</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">0</div>
+                    <div class="metric-label">Scheduling Conflicts</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">5+</div>
+                    <div class="metric-label">Hours Saved Weekly</div>
+                </div>
+            </div>
+            
+            <div class="impact">
+                <h4>📊 Business Impact</h4>
+                <ul>
+                    <li>Eliminated scheduling conflicts and double-bookings across three countries</li>
+                    <li>Created complete audit trail for compliance and management reporting</li>
+                    <li>Automated delegate assignment ensuring seamless coverage during absences</li>
+                    <li>Implemented comment tracking for issue documentation and resolution</li>
+                    <li>Enabled real-time visibility into team availability for project planning</li>
+                    <li>Reduced administrative overhead by 80% for managers</li>
+                </ul>
+            </div>
+            
+            <div class="tech-stack">
+                <h5>Technologies & Techniques:</h5>
+                <p>Microsoft Lists, Power Automate, SharePoint, Approval Workflows, Email Notifications, Conditional Logic, Date/Time Functions, Multi-Region Support, Escalation Handling</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h3 class="project-title">Enterprise Task Tracking Platform</h3>
+                <span class="project-date">2024-2025 | PwC</span>
+            </div>
+            
+            <div class="project-tags">
+                <span class="tag">Power Apps</span>
+                <span class="tag">Microsoft Lists</span>
+                <span class="tag">Power Automate</span>
+                <span class="tag">SharePoint</span>
+                <span class="tag">Business Intelligence</span>
+            </div>
+            
+            <div class="challenge">
+                <h4>🎯 The Challenge</h4>
+                <p>Leadership lacked visibility into team capacity and project progress. Task updates were inconsistent, and there was no systematic way to track workload distribution or ensure accountability. The existing SharePoint list was underutilized due to poor user experience.</p>
+            </div>
+            
+            <div class="solution">
+                <h4>💡 The Solution</h4>
+                <p>I transformed the basic SharePoint tracker into an intelligent task management platform with custom interfaces and automated compliance monitoring:</p>
+                <ul style="margin-top: 10px; margin-left: 20px;">
+                    <li><strong>Custom Power Apps Interface:</strong> Intuitive form design with improved visualization and user experience</li>
+                    <li><strong>Smart Reminders:</strong> 7-day automated reminder system with escalation logic</li>
+                    <li><strong>Real-Time Dashboards:</strong> Management views showing team capacity and project distribution</li>
+                    <li><strong>Compliance Tracking:</strong> Automated monitoring ensuring 95%+ task update adherence</li>
+                    <li><strong>Analytics Integration:</strong> Weekly utilization reports for leadership decision-making</li>
+                </ul>
+            </div>
+            
+            <div class="metrics">
+                <div class="metric">
+                    <div class="metric-value">95%+</div>
+                    <div class="metric-label">Update Compliance</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">100%</div>
+                    <div class="metric-label">Team Adoption</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">Real-Time</div>
+                    <div class="metric-label">Capacity Insights</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">Daily</div>
+                    <div class="metric-label">Documentation</div>
+                </div>
+            </div>
+            
+            <div class="impact">
+                <h4>📊 Business Impact</h4>
+                <ul>
+                    <li>Achieved 95%+ task update compliance through automated reminders</li>
+                    <li>Enabled leadership to make data-driven resource allocation decisions</li>
+                    <li>Provided real-time visibility into team capacity and bottlenecks</li>
+                    <li>Improved project planning accuracy with historical utilization data</li>
+                    <li>Created foundation for predictive capacity planning</li>
+                    <li>Enhanced team accountability with transparent task tracking</li>
+                </ul>
+            </div>
+            
+            <div class="tech-stack">
+                <h5>Technologies & Techniques:</h5>
+                <p>Power Apps (Canvas), Microsoft Lists, Power Automate, SharePoint, Custom Forms, Reminder Logic, Data Visualization, Conditional Formatting, User Experience Design</p>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>💼 Professional Experience Highlights</h2>
+        </div>
+
+        <div class="project-card">
+            <h3 class="project-title" style="color: #764ba2;">KPMG - Enterprise Systems Support</h3>
+            <p style="margin: 15px 0; color: #666;">Sep 2022 - Apr 2024</p>
+            
+            <div class="impact">
+                <h4>Key Achievements</h4>
+                <ul>
+                    <li>Maintained 95%+ SLA compliance supporting Partners and VIPs on business-critical systems</li>
+                    <li>Administered Azure AD, Intune, and OKTA for 1,000+ users ensuring security and compliance</li>
+                    <li>Managed identity lifecycle including MFA implementation and access controls</li>
+                    <li>Supported enterprise platforms: Workday, Beeline, Yello, ServiceNow</li>
+                </ul>
+            </div>
+            
+            <div class="tech-stack">
+                <h5>Technologies:</h5>
+                <p>Azure Active Directory, Intune, OKTA, Workday, Beeline, Yello, ServiceNow, MFA, Identity Management</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3 class="project-title" style="color: #764ba2;">CompuCom - Technical Operations</h3>
+            <p style="margin: 15px 0; color: #666;">Dec 2018 - Sep 2022</p>
+            
+            <div class="impact">
+                <h4>Key Achievements</h4>
+                <ul>
+                    <li>Managed critical incidents for 8,000+ retail locations maintaining 98%+ SLA</li>
+                    <li>Processed 50+ daily priority tickets with comprehensive tracking</li>
+                    <li>Administered Active Directory and Exchange for enterprise clients</li>
+                    <li>Created technical documentation improving team efficiency by 30%</li>
+                    <li>Developed knowledge base reducing ticket resolution time</li>
+                </ul>
+            </div>
+            
+            <div class="tech-stack">
+                <h5>Technologies:</h5>
+                <p>ServiceNow, Active Directory, Exchange Online, VDI Management, Network Operations, Incident Management</p>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>🛠️ Technical Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Automation & Development</h3>
+                <ul>
+                    <li>✓ Microsoft Power Automate</li>
+                    <li>✓ Power Apps (Canvas & Model-driven)</li>
+                    <li>✓ Microsoft Lists</li>
+                    <li>✓ SharePoint Workflows</li>
+                    <li>✓ Process Design</li>
+                    <li>✓ Workflow Optimization</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Enterprise Systems</h3>
+                <ul>
+                    <li>✓ ServiceNow</li>
+                    <li>✓ Workday</li>
+                    <li>✓ Beeline</li>
+                    <li>✓ Active Directory</li>
+                    <li>✓ Azure AD</li>
+                    <li>✓ OKTA/MFA</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Cloud & Infrastructure</h3>
+                <ul>
+                    <li>✓ Microsoft 365 Admin</li>
+                    <li>✓ Azure Fundamentals</li>
+                    <li>✓ Intune</li>
+                    <li>✓ Exchange Online</li>
+                    <li>✓ SharePoint Administration</li>
+                    <li>✓ VDI Management</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Data & Analytics</h3>
+                <ul>
+                    <li>✓ Power BI</li>
+                    <li>✓ Alteryx</li>
+                    <li>✓ Data Analysis</li>
+                    <li>✓ Process Metrics</li>
+                    <li>✓ Reporting & Dashboards</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Methodologies</h3>
+                <ul>
+                    <li>✓ Agile/Scrum</li>
+                    <li>✓ Process Improvement</li>
+                    <li>✓ ITIL Fundamentals</li>
+                    <li>✓ Change Management</li>
+                    <li>✓ Technical Documentation</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>✓ Cross-Border Collaboration</li>
+                    <li>✓ Stakeholder Management</li>
+                    <li>✓ Bilingual (EN/ES)</li>
+                    <li>✓ Remote Work Expert</li>
+                    <li>✓ Problem Solving</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>🎓 Education & Certifications</h2>
+        </div>
+
+        <div class="project-card">
+            <h3 style="color: #667eea;">Computer Systems Engineering</h3>
+            <p style="color: #666; margin: 10px 0;">Kuepa University | Expected January 2026</p>
+            <p>Currently completing degree while working full-time, focusing on software development, systems analysis, and automation technologies.</p>
+        </div>
+
+        <div class="project-card">
+            <h3 style="color: #667eea;">Professional Certifications</h3>
+            <div class="project-tags" style="margin-top: 15px;">
+                <span class="tag">Power BI Fundamentals</span>
+                <span class="tag">Alteryx Data Science</span>
+                <span class="tag">Scrum Fundamentals</span>
+                <span class="tag">TOEIC 915/990</span>
+            </div>
+            <p style="margin-top: 15px;">TOEIC Score of 915 demonstrates full professional working proficiency in English for business environments.</p>
+        </div>
+
+        <footer>
+            <h2 style="color: #667eea; margin-bottom: 20px;">Let's Build Something Amazing Together</h2>
+            <p style="font-size: 1.1em; margin-bottom: 30px; color: #666;">
+                I'm passionate about transforming manual processes into intelligent automation solutions.<br>
+                Whether you need to streamline operations, improve efficiency, or unlock data insights,<br>
+                I'm ready to help your organization achieve measurable results.
+            </p>
+            
+            <div>
+                <a href="mailto:lizbeth.ayalaph2001@gmail.com" class="cta-button">Get In Touch</a>
+                <a href="https://linkedin.com/in/lizbeth-a-a3552b221" target="_blank" class="cta-button">View LinkedIn</a>
+            </div>
+            
+            <p style="margin-top: 30px; color: #999; font-size: 0.9em;">
+                📍 Mexico City, Mexico | 🌐 Remote Available | 💼 Open to Senior-Level Opportunities
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
