@@ -14,8 +14,8 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #2c3e50;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8ba3 100%);
             min-height: 100vh;
         }
         
@@ -35,14 +35,14 @@
         }
         
         header h1 {
-            color: #667eea;
+            color: #1e3c72;
             font-size: 2.5em;
             margin-bottom: 10px;
         }
         
         header p {
             font-size: 1.2em;
-            color: #666;
+            color: #34495e;
             margin-bottom: 20px;
         }
         
@@ -61,11 +61,11 @@
         .stat-number {
             font-size: 2.5em;
             font-weight: bold;
-            color: #667eea;
+            color: #1e3c72;
         }
         
         .stat-label {
-            color: #666;
+            color: #34495e;
             font-size: 0.9em;
         }
         
@@ -78,16 +78,16 @@
         }
         
         .contact-links a {
-            color: #667eea;
+            color: #1e3c72;
             text-decoration: none;
             padding: 10px 20px;
-            border: 2px solid #667eea;
+            border: 2px solid #1e3c72;
             border-radius: 25px;
             transition: all 0.3s;
         }
         
         .contact-links a:hover {
-            background: #667eea;
+            background: #1e3c72;
             color: white;
         }
         
@@ -100,7 +100,7 @@
         }
         
         .section-title h2 {
-            color: #667eea;
+            color: #1e3c72;
             font-size: 2em;
         }
         
@@ -128,14 +128,14 @@
         }
         
         .project-title {
-            color: #667eea;
+            color: #1e3c72;
             font-size: 1.8em;
             flex: 1;
             min-width: 250px;
         }
         
         .project-date {
-            background: #667eea;
+            background: #1e3c72;
             color: white;
             padding: 8px 15px;
             border-radius: 20px;
@@ -150,11 +150,11 @@
         }
         
         .tag {
-            background: #f0f0f0;
+            background: #e8eef5;
             padding: 5px 15px;
             border-radius: 15px;
             font-size: 0.85em;
-            color: #666;
+            color: #34495e;
         }
         
         .challenge, .solution, .impact {
@@ -162,7 +162,7 @@
         }
         
         .challenge h4, .solution h4, .impact h4 {
-            color: #764ba2;
+            color: #2a5298;
             margin-bottom: 10px;
             font-size: 1.2em;
         }
@@ -182,7 +182,7 @@
             content: "✓";
             position: absolute;
             left: 0;
-            color: #667eea;
+            color: #1e3c72;
             font-weight: bold;
             font-size: 1.2em;
         }
@@ -193,7 +193,7 @@
             gap: 20px;
             margin: 20px 0;
             padding: 20px;
-            background: #f8f9ff;
+            background: #f0f4f8;
             border-radius: 10px;
         }
         
@@ -204,23 +204,23 @@
         .metric-value {
             font-size: 2em;
             font-weight: bold;
-            color: #667eea;
+            color: #1e3c72;
         }
         
         .metric-label {
-            color: #666;
+            color: #34495e;
             font-size: 0.9em;
         }
         
         .tech-stack {
-            background: #f8f9ff;
+            background: #f0f4f8;
             padding: 15px;
             border-radius: 10px;
             margin-top: 15px;
         }
         
         .tech-stack h5 {
-            color: #764ba2;
+            color: #2a5298;
             margin-bottom: 10px;
         }
         
@@ -239,7 +239,7 @@
         }
         
         .skill-category h3 {
-            color: #667eea;
+            color: #1e3c72;
             margin-bottom: 15px;
             font-size: 1.3em;
         }
@@ -250,7 +250,7 @@
         
         .skill-category li {
             padding: 8px 0;
-            color: #666;
+            color: #34495e;
         }
         
         footer {
@@ -264,7 +264,7 @@
         
         .cta-button {
             display: inline-block;
-            background: #667eea;
+            background: #1e3c72;
             color: white;
             padding: 15px 40px;
             border-radius: 30px;
@@ -275,8 +275,9 @@
         }
         
         .cta-button:hover {
-            background: #764ba2;
+            background: #2a5298;
             transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(30, 60, 114, 0.4);
         }
         
         @media (max-width: 768px) {
@@ -469,7 +470,7 @@
 
         <div class="project-card">
             <div class="project-header">
-                <h3 class="project-title">Enterprise Task Tracking Platform</h3>
+                <h3 class="project-title">Task Tracking Platform Enhancement</h3>
                 <span class="project-date">2024-2025 | PwC</span>
             </div>
             
@@ -483,18 +484,18 @@
             
             <div class="challenge">
                 <h4>🎯 The Challenge</h4>
-                <p>Leadership lacked visibility into team capacity and project progress. Task updates were inconsistent, and there was no systematic way to track workload distribution or ensure accountability. The existing SharePoint list was underutilized due to poor user experience.</p>
+                <p>The team had an existing SharePoint-based task tracking system that wasn't being used effectively. Task updates were inconsistent, the interface was difficult to navigate, and leadership lacked real-time visibility into team capacity and project progress. I was asked to take ownership and modernize the solution.</p>
             </div>
             
             <div class="solution">
                 <h4>💡 The Solution</h4>
-                <p>I transformed the basic SharePoint tracker into an intelligent task management platform with custom interfaces and automated compliance monitoring:</p>
+                <p>I enhanced the existing tracking system with modern Power Platform capabilities, transforming it from an underutilized list into an intelligent management tool:</p>
                 <ul style="margin-top: 10px; margin-left: 20px;">
-                    <li><strong>Custom Power Apps Interface:</strong> Intuitive form design with improved visualization and user experience</li>
-                    <li><strong>Smart Reminders:</strong> 7-day automated reminder system with escalation logic</li>
-                    <li><strong>Real-Time Dashboards:</strong> Management views showing team capacity and project distribution</li>
-                    <li><strong>Compliance Tracking:</strong> Automated monitoring ensuring 95%+ task update adherence</li>
-                    <li><strong>Analytics Integration:</strong> Weekly utilization reports for leadership decision-making</li>
+                    <li><strong>Custom Power Apps Interface:</strong> Built user-friendly form with improved visualization, replacing the basic SharePoint view</li>
+                    <li><strong>Smart Reminder System:</strong> Implemented 7-day automated reminder emails with escalation logic to drive adoption</li>
+                    <li><strong>Enhanced Data Structure:</strong> Optimized existing fields and added new tracking capabilities</li>
+                    <li><strong>Management Dashboards:</strong> Created real-time views for capacity planning and resource allocation</li>
+                    <li><strong>Analytics Integration:</strong> Enabled weekly utilization reports for leadership decision-making</li>
                 </ul>
             </div>
             
@@ -520,12 +521,12 @@
             <div class="impact">
                 <h4>📊 Business Impact</h4>
                 <ul>
-                    <li>Achieved 95%+ task update compliance through automated reminders</li>
+                    <li>Increased task update compliance from ~40% to 95%+ through automated reminders</li>
+                    <li>Transformed underutilized system into daily-use platform for entire team</li>
                     <li>Enabled leadership to make data-driven resource allocation decisions</li>
                     <li>Provided real-time visibility into team capacity and bottlenecks</li>
                     <li>Improved project planning accuracy with historical utilization data</li>
-                    <li>Created foundation for predictive capacity planning</li>
-                    <li>Enhanced team accountability with transparent task tracking</li>
+                    <li>Enhanced team accountability with transparent, user-friendly tracking</li>
                 </ul>
             </div>
             
@@ -540,7 +541,29 @@
         </div>
 
         <div class="project-card">
-            <h3 class="project-title" style="color: #764ba2;">KPMG - Enterprise Systems Support</h3>
+            <h3 class="project-title" style="color: #2a5298;">PwC - HR Information Systems, Data & Analytics</h3>
+            <p style="margin: 15px 0; color: #666;">Sep 2024 - Present</p>
+            
+            <div class="impact">
+                <h4>Cross-Functional Automation & Collaboration</h4>
+                <ul>
+                    <li>Partner with HR Operations, IT, and business units across US, Mexico, and Argentina to deliver integrated automation solutions</li>
+                    <li>Lead requirements gathering and stakeholder management across international teams with different workflows and compliance requirements</li>
+                    <li>Design and implement Power Platform solutions (Power Automate, Power Apps, SharePoint) that streamline operations and improve process efficiency</li>
+                    <li>Create comprehensive technical documentation ensuring knowledge transfer, sustainability, and team enablement</li>
+                    <li>Deliver data-driven insights and analytics for leadership decision-making across global operations</li>
+                    <li>Manage multiple concurrent automation projects serving diverse stakeholder groups</li>
+                </ul>
+            </div>
+            
+            <div class="tech-stack">
+                <h5>Technologies & Impact:</h5>
+                <p>Power Automate, Power Apps, SharePoint, Microsoft Lists, Workday, Cross-border project delivery, Stakeholder management, Technical documentation, Process optimization</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3 class="project-title" style="color: #2a5298;">KPMG - Enterprise Systems Support</h3>
             <p style="margin: 15px 0; color: #666;">Sep 2022 - Apr 2024</p>
             
             <div class="impact">
@@ -560,7 +583,7 @@
         </div>
 
         <div class="project-card">
-            <h3 class="project-title" style="color: #764ba2;">CompuCom - Technical Operations</h3>
+            <h3 class="project-title" style="color: #2a5298;">CompuCom - Technical Operations</h3>
             <p style="margin: 15px 0; color: #666;">Dec 2018 - Sep 2022</p>
             
             <div class="impact">
@@ -660,13 +683,13 @@
         </div>
 
         <div class="project-card">
-            <h3 style="color: #667eea;">Computer Systems Engineering</h3>
-            <p style="color: #666; margin: 10px 0;">Kuepa University | Expected January 2026</p>
+            <h3 style="color: #1e3c72;">Computer Systems Engineering</h3>
+            <p style="color: #34495e; margin: 10px 0;">Kuepa University | Expected January 2026</p>
             <p>Currently completing degree while working full-time, focusing on software development, systems analysis, and automation technologies.</p>
         </div>
 
         <div class="project-card">
-            <h3 style="color: #667eea;">Professional Certifications</h3>
+            <h3 style="color: #1e3c72;">Professional Certifications</h3>
             <div class="project-tags" style="margin-top: 15px;">
                 <span class="tag">Power BI Fundamentals</span>
                 <span class="tag">Alteryx Data Science</span>
@@ -677,22 +700,23 @@
         </div>
 
         <footer>
-            <h2 style="color: #667eea; margin-bottom: 20px;">Let's Build Something Amazing Together</h2>
-            <p style="font-size: 1.1em; margin-bottom: 30px; color: #666;">
+            <h2 style="color: #1e3c72; margin-bottom: 20px;">Let's Build Something Amazing Together</h2>
+            <p style="font-size: 1.1em; margin-bottom: 30px; color: #34495e;">
                 I'm passionate about transforming manual processes into intelligent automation solutions.<br>
                 Whether you need to streamline operations, improve efficiency, or unlock data insights,<br>
                 I'm ready to help your organization achieve measurable results.
             </p>
             
             <div>
-                <a href="mailto:lizbeth.ayalaph2001@gmail.com" class="cta-button">Get In Touch</a>
+                <a href="mailto:lizbeth.ayalaph2001@gmail.com" class="cta-button">📧 lizbeth.ayalaph2001@gmail.com</a>
                 <a href="https://linkedin.com/in/lizbeth-a-a3552b221" target="_blank" class="cta-button">View LinkedIn</a>
             </div>
             
-            <p style="margin-top: 30px; color: #999; font-size: 0.9em;">
+            <p style="margin-top: 30px; color: #7e8ba3; font-size: 0.9em;">
                 📍 Mexico City, Mexico | 🌐 Remote Available | 💼 Open to Senior-Level Opportunities
             </p>
         </footer>
     </div>
 </body>
 </html>
+
